@@ -6,6 +6,31 @@
 3. transfer: трансфер монеты с фандинга на спот или наоборот. пока что доступно только на bybit.
 4. withdraw: вывод монеты в конкретной сети на один указанный кошелек.
 
+## Настройка
+```
+git clone https://github.com/zaivanza/aio-cex
+
+
+
+tmux new -s aio-cex
+tmux attach -t aio-cex
+cd aio-cex
+python3 --version
+update-alternatives --config python3
+# Нужен 3.11
+# ПОсмотреть как настроить python можно тут: https://github.com/AlexToTheSun/memeland
+
+mkdir /root/aio-cex/venv && cd /root/aio-cex/venv
+python3.11 -m venv /root/aio-cex/venv
+source /root/aio-cex/venv/bin/activate
+
+cd /root/aio-cex
+sudo apt-get install gcc python-dev libgmp3-dev
+pip install -r requirements.txt
+pip install requests
+```
+
+
 ## Подготовка (необязательно):
 
 Создаем виртуальное окружение :
